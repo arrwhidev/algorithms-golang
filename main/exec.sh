@@ -1,0 +1,1 @@
+clear && go build && ./main
