@@ -1,4 +1,4 @@
-package sorting
+package sort
 
 func Bubble(unsorted []int) []int {
 	size := len(unsorted)

@@ -1,4 +1,4 @@
-package sorting
+package sort
 
 func Selection(unsorted []int) []int {
 	size := len(unsorted)
