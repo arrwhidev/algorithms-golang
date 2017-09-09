@@ -1,13 +1,14 @@
 package main
 
 import (
-	"datastructures-and-algorithms/sorting"
-	"datastructures-and-algorithms/util"
 	"fmt"
+
+	"github.com/arrwhidev/algorithms-golang/sorting"
+	"github.com/arrwhidev/algorithms-golang/util"
 )
 
 func main() {
-	// bubble()
+	bubble()
 	selection()
 }
 
@@ -15,12 +16,12 @@ func bubble() {
 	fmt.Println("Executing Bubble Sort...")
 	unsorted := util.RandArray(10)
 	sorted := sorting.Bubble(unsorted)
-	fmt.Println(sorted)
+	fmt.Println("--> ", sorted)
 }
 
 func selection() {
 	fmt.Println("Executing Selection Sort...")
 	unsorted := util.RandArray(10)
 	sorted := sorting.Selection(unsorted)
-	fmt.Println(sorted)
+	fmt.Println("--> ", sorted)
 }
