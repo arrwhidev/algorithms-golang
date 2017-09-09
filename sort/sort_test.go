@@ -6,19 +6,19 @@ import (
 )
 
 func TestBubble_shouldSortArray(t *testing.T) {
-	array := []int{5, 7, 3, 9, 6}
+	input := []int{5, 7, 3, 9, 6}
 	expected := []int{3, 5, 6, 7, 9}
-	result := Bubble(array)
-	if !reflect.DeepEqual(expected, result) {
-		t.Error("Expected array to be sorted")
-	}
+	assertEqual(t, expected, Bubble(input))
 }
 
 func TestSelection_shouldSortArray(t *testing.T) {
-	array := []int{5, 7, 3, 9, 6}
+	input := []int{5, 7, 3, 9, 6}
 	expected := []int{3, 5, 6, 7, 9}
-	result := Selection(array)
+	assertEqual(t, expected, Selection(input))
+}
+
+func assertEqual(t *testing.T, expected []int, result []int) {
 	if !reflect.DeepEqual(expected, result) {
-		t.Error("Expected array to be sorted")
+		t.Error("Expected array to be sorted. Result:")
 	}
 }

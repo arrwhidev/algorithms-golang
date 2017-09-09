@@ -1,17 +1,24 @@
 package sort
 
+import "github.com/arrwhidev/algorithms-golang/util"
+
+/**
+Bubble Sort
+
+- Gradually move higher elements to right, lower elements to left.
+- Worst case: O(n^2)
+- Best case: Ω(n)
+*/
+
 func Bubble(unsorted []int) []int {
 	size := len(unsorted)
-	swapCount := -1
-	tmp := -1
-	for swapCount != 0 {
-		swapCount = 0
-		for i := range unsorted {
-			if (i != size-1) && (unsorted[i] > unsorted[i+1]) {
-				tmp = unsorted[i]
-				unsorted[i] = unsorted[i+1]
-				unsorted[i+1] = tmp
-				swapCount++
+	didSwap := true
+	for didSwap {
+		didSwap = false
+		for i := 1; i < size; i++ {
+			if unsorted[i-1] > unsorted[i] {
+				util.Swap(unsorted, i-1, i)
+				didSwap = true
 			}
 		}
 	}
