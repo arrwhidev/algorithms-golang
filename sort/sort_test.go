@@ -23,6 +23,12 @@ func TestInsertion_shouldSortArray(t *testing.T) {
 	assertEqual(t, expected, Insertion(input))
 }
 
+func TestMerge_shouldSortArray(t *testing.T) {
+	input := []int{5, 7, 3, 9, 6, 50, 2, 8, 11, 1}
+	expected := []int{1, 2, 3, 5, 6, 7, 8, 9, 11, 50}
+	assertEqual(t, expected, Merge(input))
+}
+
 func assertEqual(t *testing.T, expected []int, result []int) {
 	if !reflect.DeepEqual(expected, result) {
 		t.Error("Expected array to be sorted. Result:", result)
