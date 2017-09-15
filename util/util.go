@@ -11,7 +11,5 @@ func RandArray(size int) []int {
 }
 
 func Swap(a []int, i1 int, i2 int) {
-	tmp := a[i1]
-	a[i1] = a[i2]
-	a[i2] = tmp
+	a[i1], a[i2] = a[i2], a[i1]
 }
